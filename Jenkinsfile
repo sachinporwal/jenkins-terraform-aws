@@ -8,7 +8,7 @@ pipeline {
         checkout scm
       }
     }
-  }
+
 
 
     stage('Terraform init') {
@@ -26,6 +26,6 @@ pipeline {
       }
     }
 
-
+}
 
 }
