@@ -20,7 +20,7 @@ pipeline {
 
     stage('Terraform Apply') {
       steps {
-        withCrendentials([[$class: 'AmazonWebServicesCredentialsBinding', credentgialsId: 'aws-terraform']]){
+        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentgialsId: 'aws-terraform']]){
           sh 'terraform apply -auto-approve'
         }
       }
